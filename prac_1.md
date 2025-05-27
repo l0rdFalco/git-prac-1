@@ -1,0 +1,74 @@
+## introduction to git
+
+version control is a system that records changes to a file(s) over time so that you can recall specific versions later.
+These versions are recorded in a repository
+
+### types of VS systems:
+1. _local VCS:_ all code/changes are tracked in locally in the developers computer
+2. _centralised VSC:_ devs connect to a centralised serveR and can collaborate from there
+3. _distributed VSC:_ each dev has a local version of the repo. each dev can then interact with the repote repo in various ways
+
+a repo is a directory/folder where the project files are stored. It can either be local or remote
+
+### centralised vs distributed
+in centralised VSC commits and updates are done directly to the remote repo
+
+in distributed VSC updates and commits are first done in the local repo before pushing them to the remote repo
+
+
+### what is git?
+
+Git is a distributed version control tool that allows  each developer in a teach to 
+1. sync code from remote repositories
+2. create their own local repositories
+3. make changes to local repositories
+4. interact with corresponding remote repos
+5. allow for parallel development with the **branch, merge and rebase** commands
+
+changes made in the remote repo is made instantly available to other devs connected to the repo 
+
+### how does git work?
+there are three different local areas within git
+1. working copy/directory
+2. staging area
+3. local repository
+
+when a file is changed in any way, those changes reside in the working copy
+
+when changes are ready to be commited, they are moved from the working copy to the staging area (temp storage within git)
+
+all commited changes are stored in the local repo
+
+the local repo can be synced with a remote repo
+
+actions git uses with the remote repo include fetch, merge clone push, fetch
+
+### workflow
+1. **git add** moves changes from the working directory to the staging area. This staging area is an intermediate/temporary location
+
+2. **git commit** moces changes from the staging area to the local repo
+
+3. **git push** moves the changes from the local repo to the remote repo
+
+4. **git pull** gets the latest version from the remote repo to the local repo
+
+5. **git merge** incorporates changes from the remote repo into the local repo
+
+git setup commands include:
+
+**git init:** used to initialize a local repo
+
+**git clone:** used to create a copy of remote repo in the local machine
+
+**git fork:** create a copy of remote repo in your github account
+
+
+git sync commands include:
+
+**git origin:** used to connect a remote repo to the local repo with the full command `git remote add origin remote_link`
+
+**git pull:** used to copy all files from the _master_ branch of remote repo to local repo with the full command `git pull origin master`
+
+**git push:** used to copy local changes to the remote repo with the `command git push origin master`
+
+
