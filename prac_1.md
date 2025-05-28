@@ -71,4 +71,14 @@ git sync commands include:
 
 **git push:** used to copy local changes to the remote repo with the `command git push origin master`
 
+when not using vs code, use these steps:
+git init
+git config --global user.name "myname"
+git config --global user.email "email@email.com"
+
+
+**git status** allows you to see what the local repository looks like
+
+_untracked_ file(s) means that git doesn't know about said files. It means that the file is in the working directory
+
 
