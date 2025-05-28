@@ -28,7 +28,7 @@ Git is a distributed version control tool that allows  each developer in a teach
 changes made in the remote repo is made instantly available to other devs connected to the repo 
 
 ### how does git work?
-there are three different local areas within git
+there are three different local areas within git:
 1. working copy/directory
 2. staging area
 3. local repository
@@ -81,4 +81,5 @@ git config --global user.email "email@email.com"
 
 _untracked_ file(s) means that git doesn't know about said files. It means that the file is in the working directory
 
+**git log** shows you a list of all commits in the current branch
 
