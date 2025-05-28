@@ -81,5 +81,18 @@ git config --global user.email "email@email.com"
 
 _untracked_ file(s) means that git doesn't know about said files. It means that the file is in the working directory
 
+after doing git commit -m "my message", an output is generated which consists of a branch name, commit id, commit message and the changes made 
+
 **git log** shows you a list of all commits in the current branch
+
+each entry has a number of things
+1. a hash id
+2. the author associated with the commit
+3. the exact time.
+4. the commit message
+
+to get greater info about a given commit, use `git show commid_id`
+
+
+
 
