@@ -140,4 +140,3 @@ to copy changes from a branch to the main branch you do the following:
 
 `git stash` saves uncommited changes into a temporary location
 
-start from 1:13:00
