@@ -193,3 +193,39 @@ to copy changes from a branch to the main branch you do the following:
 3. Requires manual intervention if branches diverge (git merge or git rebase must be done explicitly).
 
 
+### pull requests
+notifies developers about changes you have pushed to a branch in a repo
+
+when a pull request is open, you can aknowlege and review the changes and merge changes to the main branch
+
+Here is the process of creating a pull request on an open source github repo
+
+1. fork the repo
+2. clone the repo locally with `git clone https://github.com/your-username/repo.git`
+3. add the oiginal repo as upstream with `git remote add upstream https://github.com/original-owner/repo.git`
+4. create a new branch in the newly created local repo with `git checkout -b your-feature-branch`
+5. make your changes, stage and commit as one usually does
+6. before pushing to remote branch, sync with the upstream to avoid conflicts with 
+    - `git fetch upstream`
+    - `git rebase upstream/main` Or merge: `git merge upstream/main`
+7. push to your fork with `git push origin your-feature-branch`
+8. open a pull request on the remote fork
+9. After entering information, click **create pull request**
+10. If approved, the maintainer will merge your PR
+11. After the merge, sync your local repo with
+    - git checkout main
+    - git pull upstream main
+    - git push origin main  # Update your fork
+
+### Example Workflow Summary
+- git clone https://github.com/your-username/repo.git
+- cd repo
+- git remote add upstream https://github.com/original-owner/repo.git
+- git checkout -b fix-typo
+- **Make changes**
+- git add .
+- git commit -m "Fix typo in documentation"
+- git fetch upstream
+- git rebase upstream/main
+- git push origin fix-typo
+- **Then create PR via GitHub UI**
