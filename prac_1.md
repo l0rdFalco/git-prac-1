@@ -119,3 +119,8 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 `git rev-list branch_name` shows the number of commits in a given branch
 
+
+## merging
+
+to copy changes from a branch to the main branch you do the following:
+
