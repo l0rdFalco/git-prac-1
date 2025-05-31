@@ -115,4 +115,7 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 `git checkout branch_name` is for switching to the mentioned branch
 
+`git log brach_name` lists out all the commits in the mentioned branch
+
+`git rev-list branch_name` shows the number of commits in a given branch
 
