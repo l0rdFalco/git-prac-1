@@ -140,3 +140,56 @@ to copy changes from a branch to the main branch you do the following:
 
 `git stash` saves uncommited changes into a temporary location
 
+`git config pull.rebase false`:
+
+**Behavior:**
+
+1. Uses a merge strategy (default in Git).
+
+2. When you run git pull, it performs a git fetch followed by a git merge.
+
+3. Creates a merge commit if the local and remote branches have diverged.
+
+**When to use:**
+
+1. When you want to preserve the entire history, including explicit merge commits.
+
+2. Good for collaborative workflows where tracking merge points is useful (e.g., long-lived feature branches).
+
+`git config pull.rebase true`:
+
+**Behavior:**
+
+1. Uses a rebase strategy.
+
+2. When you run git pull, it performs a git fetch followed by a git rebase.
+
+3. Rewrites local commits on top of the remote branch, avoiding merge commits.
+
+**When to use:**
+
+1. When you want a linear commit history (no merge commits).
+
+2. Preferred for small, frequent updates (e.g., solo work or short-lived branches).
+
+3. Warning: Rebasing rewrites history—avoid if others are working on the same branch.
+
+`git config pull.ff only`:
+
+**Behavior:**
+
+1. Uses a fast-forward-only strategy.
+
+2. When you run git pull, it only updates if the local branch can be fast-forwarded (no diverged commits).
+
+3. Fails if the remote has new commits that require a merge or rebase.
+
+**When to use:**
+
+1. When you want to strictly avoid merges or rebases.
+
+2. Enforces a clean, linear history (e.g., in CI/CD pipelines or maintainer workflows).
+
+3. Requires manual intervention if branches diverge (git merge or git rebase must be done explicitly).
+
+
