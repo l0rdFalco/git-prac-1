@@ -127,3 +127,6 @@ to copy changes from a branch to the main branch you do the following:
 1. go to the branch you want changes to e.g main
 2. run `git branch branch_name` to merge changes from the given branch name to the currently connected branch
 
+## rebasing
+
+rebase is used when changes made in one branch need to be reflected in another branch
