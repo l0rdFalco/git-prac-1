@@ -124,3 +124,6 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 to copy changes from a branch to the main branch you do the following:
 
+1. go to the branch you want changes to e.g main
+2. run `git branch branch_name` to merge changes from the given branch name to the currently connected branch
+
