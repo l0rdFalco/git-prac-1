@@ -121,6 +121,8 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 `git rev-list branch_name` shows the number of commits in a given branch
 
+`git push --set-upstream origin branch_name` is used to create a branch name of the given alias in the remote repo if said remote branch doesnt exist
+
 
 ## merging
 
