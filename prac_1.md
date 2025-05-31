@@ -85,7 +85,9 @@ _untracked_ file(s) means that git doesn't know about said files. It means that 
 
 after doing git commit -m "my message", an output is generated which consists of a branch name, commit id, commit message and the changes made 
 
-**git log** shows you a list of all commits in the current branch
+`git log` shows you a list of all commits in the current branch
+
+`git log --oneline branch_name` shows a shorted version of the commit list on the given branch
 
 each entry has a number of things
 1. a hash id
