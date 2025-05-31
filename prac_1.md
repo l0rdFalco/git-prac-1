@@ -127,3 +127,9 @@ to copy changes from a branch to the main branch you do the following:
 1. go to the branch you want changes to e.g main
 2. run `git branch branch_name` to merge changes from the given branch name to the currently connected branch
 
+## bonus commands
+
+`git archive branch_name --format=zip -o ./archive_name.zip` is used to archive create a zip of the given name from the given branch
+
+
+`git stash` saves uncommited changes into a temporary location
