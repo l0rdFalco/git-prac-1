@@ -67,14 +67,16 @@ git sync commands include:
 
 **git origin:** used to connect a remote repo to the local repo with the full command `git remote add origin remote_link`
 
+to check if the local repo has been linked to a remote repo, we use `git remote -v`, the v flag meaning _verbose mode_
+
 **git pull:** used to copy all files from the _master_ branch of remote repo to local repo with the full command `git pull origin master`
 
-**git push:** used to copy local changes to the remote repo with the `command git push origin master`
+**git push:** used to copy local changes to the remote repo with the command `git push origin master`. ie git push RemoteRepoBranchName LocalRepoBrancHName
 
 when not using vs code, use these steps:
-git init
-git config --global user.name "myname"
-git config --global user.email "email@email.com"
+- git init
+- git config --global user.name "myname"
+- git config --global user.email "email@email.com"
 
 
 **git status** allows you to see what the local repository looks like
@@ -93,6 +95,10 @@ each entry has a number of things
 
 to get greater info about a given commit, use `git show commid_id`
 
+use `git ls-files` to see which files are being tracked in the local repo
 
+### Parallel development
+
+start from 43:00
 
 

@@ -1,1 +1,1 @@
-learning git using the 5 hour very useful tutorial
+refreshing my git knowledge using the 5 hour very useful tutorial
