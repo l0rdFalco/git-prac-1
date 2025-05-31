@@ -87,8 +87,8 @@ after doing git commit -m "my message", an output is generated which consists of
 
 **git log** shows you a list of all commits in the current branch
 
-each entry has a number of things
-1. a hash id
+each entry has a number of things:
+1. a hash id that identifies the specific changes
 2. the author associated with the commit
 3. the exact time.
 4. the commit message
@@ -138,4 +138,16 @@ to copy changes from a branch to the main branch you do the following:
 
 `git stash` saves uncommited changes into a temporary location
 
-start from 1:13:00
+## how github works
+
+### github branches
+These allow you to work on other features
+
+They can be included with the main line of your project
+
+The main or master branch is where all changes in other branches eventually get merged back to
+
+When you create a repo on github, a main/master branch is automatically created. The UI allows you to easily create other branches
+
+new branches created on github are identical to the main branch just as is the case with local git repos
+
