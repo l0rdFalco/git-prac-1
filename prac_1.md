@@ -132,3 +132,12 @@ to copy changes from a branch to the main branch you do the following:
 ## rebasing
  redo this section later
 
+
+## bonus commands
+
+`git archive branch_name --format=zip -o ./archive_name.zip` is used to archive create a zip of the given name from the given branch
+
+
+`git stash` saves uncommited changes into a temporary location
+
+start from 1:13:00
