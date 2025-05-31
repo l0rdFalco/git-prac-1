@@ -97,8 +97,22 @@ to get greater info about a given commit, use `git show commid_id`
 
 use `git ls-files` to see which files are being tracked in the local repo
 
-### Parallel development
+## Parallel development
 
-start from 43:00
+### branching
+
+Git does not create a copy of existing files for a new branch. It points to the snapshot of che changes you have made in the system
+
+development is not usually done on the master/main branch. One codes on separate branches and later merges to the main branch
+
+when one creates a new branch, the new branch will have a copy of all the commit ids present in the source branch
+
+`git branch` lists out all the branches available inside local repo. The currently active branch is highlighted with an asterix (*)
+
+`git status` also shows which the currently connected branch is
+
+`git branch branch_name` creates a new branch from the current branch
+
+`git checkout branch_name` is for switching to the mentioned branch
 
 
