@@ -132,7 +132,9 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 `git branch` lists out all the branches available inside **local repo**. The currently active branch is highlighted with an asterix (*)
 
-`git branch -a` list all the branches, **local and remote** 
+`git branch -a` list all the branches, **local and remote**
+
+`git branch -vv` lists all local branches alog with info like current branch, lastest commit hash, upstream(remote) tracking branch, lastest commit messages, ahead or hehind status compared to the upstream branch
 
 `git status` also shows which the currently connected branch is
 
