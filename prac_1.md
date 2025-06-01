@@ -67,6 +67,16 @@ git sync commands include:
 
 **git origin:** used to connect a remote repo to the local repo with the full command `git remote add origin remote_link`
 
+to rename a remote repo, you can use `git remote rename current_name new_repo_name` e.g. `git remote rename origin cyclops`
+
+to remove a remote repo use `git remote remove repo_name` or `git remote rm repo_name`
+
+to delete a branch in the remote repo, use `git push origin --delete branch_name`
+
+to delete the corresponding branch in the local repo, use `git branch -d branch_name`
+
+
+
 to check if the local repo has been linked to a remote repo, we use `git remote -v`, the v flag meaning _verbose mode_
 
 **git pull:** used to copy all files from the _master_ branch of remote repo to local repo with the full command `git pull origin master`
