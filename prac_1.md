@@ -124,7 +124,6 @@ When you create a repo on github, a main/master branch is automatically created.
 
 new branches created on github are identical to the main branch just as is the case with local git repos
 
-
 Git does not create a copy of existing files for a new branch. It points to the snapshot of che changes you have made in the system
 
 development is not usually done on the master/main branch. One codes on separate branches and later merges to the main branch
@@ -284,14 +283,26 @@ specify a new remote upstream repo that allows syncing the fork with the origina
 #### git flow
 git works with different branches to manage eacha phase of a coding project
 
-the main bnraches in git flow are:
+the main branches in git flow are:
 
 1. master
 2. develop
 3. features
-4. hot fix
+4. _hot fix_: these are solely based on the master and not the develop. It is the only branch that should fork directly off of the master 
 5. release
 
 #### github flow
 this is a lightweight branching workflow that supports teams that deploy often with dmall and large changes
+
+in github, the master or main branch is always production ready
+
+active development almost always happens on feature branches
+
+each release requires verification
+
+
+the first step in github flow is to create a branch.
+
+Since changes made on a branch do not directly affect the master branch (unless when merged) one is free to experiment
+
 
