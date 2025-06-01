@@ -244,5 +244,8 @@ Here is the process of creating a pull request on an open source github repo
 
 
 ## comparing repos
-use the diff command to compare repos
+use the diff command to compare repos using the command `git diff main origin/main`
 
+It can aldo be used to compare branches e.g. `git diff branch_1 branch_2`
+
+It can aldo be used to compare commits e.g. `git diff commit_id_1 commit_id_2`
