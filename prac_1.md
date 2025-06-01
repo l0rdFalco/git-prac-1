@@ -43,6 +43,7 @@ the local repo can be synced with a remote repo
 
 actions git uses with the remote repo include fetch, merge clone push, fetch
 
+
 ### workflow
 1. **git add** moves changes from the working directory to the staging area. This staging area is an intermediate/temporary location
 
@@ -112,6 +113,17 @@ use `git ls-files` to see which files are being tracked in the local repo
 ## Parallel development
 
 ### branching
+
+These allow you to work on other features
+
+They can be included with the main line of your project
+
+The main or master branch is where all changes in other branches eventually get merged back to
+
+When you create a repo on github, a main/master branch is automatically created. The UI allows you to easily create other branches
+
+new branches created on github are identical to the main branch just as is the case with local git repos
+
 
 Git does not create a copy of existing files for a new branch. It points to the snapshot of che changes you have made in the system
 
@@ -282,17 +294,4 @@ the main bnraches in git flow are:
 
 #### github flow
 this is a lightweight branching workflow that supports teams that deploy often with dmall and large changes
-
-## how github works
-
-### github branches
-These allow you to work on other features
-
-They can be included with the main line of your project
-
-The main or master branch is where all changes in other branches eventually get merged back to
-
-When you create a repo on github, a main/master branch is automatically created. The UI allows you to easily create other branches
-
-new branches created on github are identical to the main branch just as is the case with local git repos
 
