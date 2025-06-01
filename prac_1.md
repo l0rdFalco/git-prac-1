@@ -241,3 +241,8 @@ Here is the process of creating a pull request on an open source github repo
 - git rebase upstream/main
 - git push origin fix-typo
 - **Then create PR via GitHub UI**
+
+
+## comparing repos
+use the diff command to compare repos
+
