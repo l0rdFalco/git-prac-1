@@ -129,7 +129,7 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 `git checkout branch_name` is for switching to the mentioned branch
 
-`git log brach_name` lists out all the commits in the mentioned branch
+`git log branch_name` lists out all the commits in the mentioned branch
 
 `git rev-list branch_name` shows the number of commits in a given branch
 
@@ -265,5 +265,21 @@ use `git remote -v` to list currently configured remote repos
 
 specify a new remote upstream repo that allows syncing the fork with the original repo using `git remote add upstream repo_url`
 
-github workflow
+## github workflow
+
+### Git flow VS Github flow
+
+#### git flow
+git works with different branches to manage eacha phase of a coding project
+
+the main bnraches in git flow are:
+
+1. master
+2. develop
+3. features
+4. hot fix
+5. release
+
+#### github flow
+this is a lightweight branching workflow that supports teams that deploy often with dmall and large changes
 
