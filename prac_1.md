@@ -327,3 +327,14 @@ switch to one of the sub branches and start commiting. DO NOT CODE ON THE MAIN B
 
 basically start coding 
 
+3. **the third step is to open a pull request**
+
+this is used for various this like submitting code for review, asking for feedback, help from other collaborators etc
+
+4. **the next step is code review and discussions**
+
+5. **test changes**
+this testing phase is done before deploying to production so that changes can be experienced in a production-like environment
+
+6. **merge new code**
+merge code from the current branch to the main branch
