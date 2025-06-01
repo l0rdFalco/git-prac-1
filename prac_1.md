@@ -257,3 +257,13 @@ It can aldo be used to compare commits e.g. `git diff commit_id_1 commit_id_2`
 
 this is used to copy anothe repo to your github account
 
+To sync changes made in original repo to your fork, configure a remote that points to upstream repo (the original repo)
+
+use these steps:
+
+use `git remote -v` to list currently configured remote repos
+
+specify a new remote upstream repo that allows syncing the fork with the original repo using `git remote add upstream repo_url`
+
+github workflow
+
