@@ -301,8 +301,27 @@ active development almost always happens on feature branches
 each release requires verification
 
 
-the first step in github flow is to create a branch.
+1. **the first step in github flow is to create a branch.**
 
 Since changes made on a branch do not directly affect the master branch (unless when merged) one is free to experiment
 
+The only rule is that anything in the master branch is always deployable
+
+branch names shoud always be descriptive
+an example on how to do this would be:
+
+1. create a main branch with git branch main
+2. you can then create the 5 main branches listed above in the git flow e.g `git branch develop`, `git branch features` etc.
+
+3. create sub branches off the 5 branchs eg. `git branch feature/auth develop`, `git branch feature/payments`, `git branch hotfix/patch_001` etc.
+
+at this point all branches and sub branches are done do you are ready to start coding
+
+switch to one of the sub branches and start commiting. DO NOT CODE ON THE MAIN BRANCH
+
+**NB:** make sure you mainttain a consistent naming convension like `type/description` e.g `feature/routes`
+
+2. **the second step in github flow is to add commits**
+
+basically start coding 
 
