@@ -119,7 +119,9 @@ development is not usually done on the master/main branch. One codes on separate
 
 when one creates a new branch, the new branch will have a copy of all the commit ids present in the source branch
 
-`git branch` lists out all the branches available inside local repo. The currently active branch is highlighted with an asterix (*)
+`git branch` lists out all the branches available inside **local repo**. The currently active branch is highlighted with an asterix (*)
+
+`git branch -a` list all the branches, **local and remote** 
 
 `git status` also shows which the currently connected branch is
 
@@ -249,3 +251,9 @@ use the diff command to compare repos using the command `git diff main origin/ma
 It can aldo be used to compare branches e.g. `git diff branch_1 branch_2`
 
 It can aldo be used to compare commits e.g. `git diff commit_id_1 commit_id_2`
+
+
+## fork
+
+this is used to copy anothe repo to your github account
+
