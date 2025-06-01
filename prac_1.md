@@ -43,6 +43,7 @@ the local repo can be synced with a remote repo
 
 actions git uses with the remote repo include fetch, merge clone push, fetch
 
+
 ### workflow
 1. **git add** moves changes from the working directory to the staging area. This staging area is an intermediate/temporary location
 
@@ -112,6 +113,16 @@ use `git ls-files` to see which files are being tracked in the local repo
 ## Parallel development
 
 ### branching
+
+These allow you to work on other features
+
+They can be included with the main line of your project
+
+The main or master branch is where all changes in other branches eventually get merged back to
+
+When you create a repo on github, a main/master branch is automatically created. The UI allows you to easily create other branches
+
+new branches created on github are identical to the main branch just as is the case with local git repos
 
 Git does not create a copy of existing files for a new branch. It points to the snapshot of che changes you have made in the system
 
@@ -272,27 +283,26 @@ specify a new remote upstream repo that allows syncing the fork with the origina
 #### git flow
 git works with different branches to manage eacha phase of a coding project
 
-the main bnraches in git flow are:
+the main branches in git flow are:
 
 1. master
 2. develop
 3. features
-4. hot fix
+4. _hot fix_: these are solely based on the master and not the develop. It is the only branch that should fork directly off of the master 
 5. release
 
 #### github flow
 this is a lightweight branching workflow that supports teams that deploy often with dmall and large changes
 
-## how github works
+in github, the master or main branch is always production ready
 
-### github branches
-These allow you to work on other features
+active development almost always happens on feature branches
 
-They can be included with the main line of your project
+each release requires verification
 
-The main or master branch is where all changes in other branches eventually get merged back to
 
-When you create a repo on github, a main/master branch is automatically created. The UI allows you to easily create other branches
+the first step in github flow is to create a branch.
 
-new branches created on github are identical to the main branch just as is the case with local git repos
+Since changes made on a branch do not directly affect the master branch (unless when merged) one is free to experiment
+
 
