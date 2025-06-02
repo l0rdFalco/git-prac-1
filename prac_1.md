@@ -186,6 +186,17 @@ you can either use the inbuilt merge confict resolver in VS code or manually edi
 
 ## stashing
 
+this is a way to create a snapshot of non-staged changes. It saves all changes in a temp location so that the user can perform other tasks e.g switching to other branchesm reverting etc.
+
+The changes can be reapplied later
+
+`git stash` to stash uncommited changes
+
+`git stash apply` to reapply the latest stash
+
+`git stash list` to see list of all stashes
+
+
 
 ## bonus commands
 
