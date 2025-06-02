@@ -185,6 +185,17 @@ you can either use the inbuilt merge confict resolver in VS code or manually edi
 
 
 ## rebasing
+this is the process of combining a sequence of commits into a new base commit. It can also be seen as a way of combining work between different branches
+
+It takes a set of commits, copies them and stores them outside the repo
+
+It can be used to make a linear sequence of commits, The commit log or history of the repo stays clean when rebasing is done
+
+It is basically changing the base of your branch from one commit to another. Internally git copies old commits and applies them to the new base
+
+It solves the same problem as git merge in that both integrate changes from one branch to another
+
+
 
 
 ## stashing
@@ -357,16 +368,16 @@ The only rule is that anything in the master branch is always deployable
 branch names shoud always be descriptive
 an example on how to do this would be:
 
-1. create a main branch with git branch main
-2. you can then create the 5 main branches listed above in the git flow e.g `git branch develop`, `git branch features` etc.
+    1. create a main branch with git branch main
+    2. you can then create the 5 main branches listed above in the git flow e.g `git branch develop`, `git branch features` etc.
 
-3. create sub branches off the 5 branchs eg. `git branch feature/auth develop`, `git branch feature/payments`, `git branch hotfix/patch_001` etc.
+    3. create sub branches off the 5 branchs eg. `git branch feature/auth develop`, `git branch feature/payments`, `git branch hotfix/patch_001` etc.
 
 at this point all branches and sub branches are done do you are ready to start coding
 
 switch to one of the sub branches and start commiting. DO NOT CODE ON THE MAIN BRANCH
 
-**NB:** make sure you mainttain a consistent naming convension like `type/description` e.g `feature/routes`
+**NB:** make sure you maintain a consistent naming convension like `type/description` e.g `feature/routes`
 
 2. **the second step in github flow is to add commits**
 
