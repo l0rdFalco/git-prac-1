@@ -170,15 +170,21 @@ to copy changes from a branch to the main branch you do the following:
 1. go to the branch you want changes to e.g main
 2. run `git merge branch_name` to merge changes from the given branch name to the currently connected branch
 
+
 #### merge conflics
 these conflicts arise when 2 files having the same content are merged
 
 They can also occur when merging branches or when merging forked histories
 
+you can either use the inbuilt merge confict resolver in VS code or manually edit the files by removing unwanted lines
+
 
 
 ## rebasing
  redo this section later
+
+
+## stashing
 
 
 ## bonus commands
