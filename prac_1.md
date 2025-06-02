@@ -382,3 +382,7 @@ merge code from the current branch to the main branch
 HEAD is a pointer that will always point to the last commit of the branch
 
 when the branch is switched, the HEAD pointer will move to the last commit of the current branch
+
+## bonus commands
+
+`git archive branch_name --format=zip -o ./archive_name.zip` is used to archive create a zip of the given name from the given branch
