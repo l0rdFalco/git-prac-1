@@ -163,7 +163,6 @@ when one creates a new branch, the new branch will have a copy of all the commit
 `git push -d remote_name branch_name`: this used to delete a remote branch e.g `git push -d origin feature/auth`
 
 
-
 ## merging
 
 to copy changes from a branch to the main branch you do the following:
@@ -174,7 +173,7 @@ to copy changes from a branch to the main branch you do the following:
 #### merge conflics
 these conflicts arise when 2 files having the same content are merged
 
-They can aldo occur when merging branches or when merging forked histories
+They can also occur when merging branches or when merging forked histories
 
 
 
