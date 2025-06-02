@@ -196,7 +196,11 @@ The changes can be reapplied later
 
 `git stash list` to see list of all stashes
 
+`git stash clear` to clear the stash
 
+`git stash drop stash@{1}` to delete a desired stash
+
+`git stash drop` deletes the most recent stash
 
 ## bonus commands
 
