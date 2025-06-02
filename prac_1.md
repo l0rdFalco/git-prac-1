@@ -118,7 +118,7 @@ These allow you to work on other features
 
 They can be included with the main line of your project
 
-The main or master branch is where all changes in other branches eventually get merged back to
+The main or master branch is where all changes in other branches eventually get merged back to. It has also been referred to as the _trunk_.
 
 When you create a repo on github, a main/master branch is automatically created. The UI allows you to easily create other branches
 
@@ -146,7 +146,7 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 `git rev-list branch_name` shows the number of commits in a given branch
 
-`git push --set-upstream origin branch_name` is used to create a branch name of the given alias in the remote repo if said remote branch doesnt exist
+`git push --set-upstream origin branch_name` when run from a local branch is used to create a corresponding branch of the given alias in the remote repo if said remote branch doesnt exist
 
 
 ## merging
@@ -341,3 +341,6 @@ merge code from the current branch to the main branch
 
 #### stashing and branching
 
+HEAD is a pointer that will always point to the last commit of the branch
+
+when the branch is switched, the HEAD pointer will move to the last commit of the current branch
