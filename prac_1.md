@@ -61,6 +61,12 @@ git setup commands include:
 
 **git clone:** used to create a copy of remote repo in the local machine
 
+when this command is executed,:
+1. git pulls all data from the remote repo to the local system
+2. git automatically names the cloned repo to _origin_
+3. a pointer is created at the main branch
+4. a local main branch is created at the same position for local operations
+
 **git fork:** create a copy of remote repo in your github account
 
 
@@ -118,7 +124,7 @@ These allow you to work on other features
 
 They can be included with the main line of your project
 
-The main or master branch is where all changes in other branches eventually get merged back to
+The main or master branch is where all changes in other branches eventually get merged back to. It has also been referred to as the _trunk_.
 
 When you create a repo on github, a main/master branch is automatically created. The UI allows you to easily create other branches
 
@@ -132,7 +138,9 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 `git branch` lists out all the branches available inside **local repo**. The currently active branch is highlighted with an asterix (*)
 
-`git branch -a` list all the branches, **local and remote** 
+`git branch -a` list all the branches, **local and remote**
+
+`git branch -vv` lists all local branches alog with info like current branch, lastest commit hash, upstream(remote) tracking branch, lastest commit messages, ahead or hehind status compared to the upstream branch
 
 `git status` also shows which the currently connected branch is
 
@@ -144,7 +152,16 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 `git rev-list branch_name` shows the number of commits in a given branch
 
-`git push --set-upstream origin branch_name` is used to create a branch name of the given alias in the remote repo if said remote branch doesnt exist
+`git push --set-upstream origin branch_name` when run from a local branch is used to create a corresponding branch of the given alias in the remote repo if said remote branch doesnt exist
+
+`git branch descriptive_branch_name random_commit_id` creates a branch called descriptive_branch_name where the latest commit is the one at the given commit id
+
+`git checkout -b descriptive_branch_name HEAD~4` creates (and switches to) a new branch of the given name where the latest commit is 4 places prior to where the HEAD is pointing
+
+`git branch -d descriptive_branch_name` or `git branch -D descriptive_branch_name` is used to delete a branch of the given name. Use **-d flag** delete merged branches and the **-D flag** to delete unmerged branches. This command only deletes branches in the local repo and not the corresponding upstream branches. 
+
+`git push -d remote_name branch_name`: this used to delete a remote branch e.g `git push -d origin feature/auth`
+
 
 
 ## merging
@@ -153,6 +170,13 @@ to copy changes from a branch to the main branch you do the following:
 
 1. go to the branch you want changes to e.g main
 2. run `git merge branch_name` to merge changes from the given branch name to the currently connected branch
+
+#### merge conflics
+these conflicts arise when 2 files having the same content are merged
+
+They can aldo occur when merging branches or when merging forked histories
+
+
 
 ## rebasing
  redo this section later
@@ -301,8 +325,44 @@ active development almost always happens on feature branches
 each release requires verification
 
 
-the first step in github flow is to create a branch.
+1. **the first step in github flow is to create a branch.**
 
 Since changes made on a branch do not directly affect the master branch (unless when merged) one is free to experiment
 
+The only rule is that anything in the master branch is always deployable
 
+branch names shoud always be descriptive
+an example on how to do this would be:
+
+1. create a main branch with git branch main
+2. you can then create the 5 main branches listed above in the git flow e.g `git branch develop`, `git branch features` etc.
+
+3. create sub branches off the 5 branchs eg. `git branch feature/auth develop`, `git branch feature/payments`, `git branch hotfix/patch_001` etc.
+
+at this point all branches and sub branches are done do you are ready to start coding
+
+switch to one of the sub branches and start commiting. DO NOT CODE ON THE MAIN BRANCH
+
+**NB:** make sure you mainttain a consistent naming convension like `type/description` e.g `feature/routes`
+
+2. **the second step in github flow is to add commits**
+
+basically start coding 
+
+3. **the third step is to open a pull request**
+
+this is used for various this like submitting code for review, asking for feedback, help from other collaborators etc
+
+4. **the next step is code review and discussions**
+
+5. **test changes**
+this testing phase is done before deploying to production so that changes can be experienced in a production-like environment
+
+6. **merge new code**
+merge code from the current branch to the main branch
+
+#### stashing and branching
+
+HEAD is a pointer that will always point to the last commit of the branch
+
+when the branch is switched, the HEAD pointer will move to the last commit of the current branch
