@@ -61,6 +61,12 @@ git setup commands include:
 
 **git clone:** used to create a copy of remote repo in the local machine
 
+when this command is executed,:
+1. git pulls all data from the remote repo to the local system
+2. git automatically names the cloned repo to _origin_
+3. a pointer is created at the main branch
+4. a local main branch is created at the same position for local operations
+
 **git fork:** create a copy of remote repo in your github account
 
 
@@ -147,6 +153,8 @@ when one creates a new branch, the new branch will have a copy of all the commit
 `git rev-list branch_name` shows the number of commits in a given branch
 
 `git push --set-upstream origin branch_name` when run from a local branch is used to create a corresponding branch of the given alias in the remote repo if said remote branch doesnt exist
+
+`git branch commithash random_commit_id` creates a branch called commithash
 
 
 ## merging
