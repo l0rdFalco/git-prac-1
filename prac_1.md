@@ -154,7 +154,14 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 `git push --set-upstream origin branch_name` when run from a local branch is used to create a corresponding branch of the given alias in the remote repo if said remote branch doesnt exist
 
-`git branch commithash random_commit_id` creates a branch called commithash
+`git branch descriptive_branch_name random_commit_id` creates a branch called descriptive_branch_name where the latest commit is the one at the given commit id
+
+`git checkout -b descriptive_branch_name HEAD~4` creates (and switches to) a new branch of the given name where the latest commit is 4 places prior to where the HEAD is pointing
+
+`git branch -d descriptive_branch_name` or `git branch -D descriptive_branch_name` is used to delete a branch of the given name. Use **-d flag** delete merged branches and the **-D flag** to delete unmerged branches. This command only deletes branches in the local repo and not the corresponding upstream branches. 
+
+`git push -d remote_name branch_name`: this used to delete a remote branch e.g `git push -d origin feature/auth`
+
 
 
 ## merging
