@@ -116,6 +116,10 @@ to get greater info about a given commit, use `git show commid_id`
 
 use `git ls-files` to see which files are being tracked in the local repo
 
+## bonus commands
+
+`git archive branch_name --format=zip -o ./archive_name.zip` is used to archive create a zip of the given name from the given branch
+
 ## Parallel development
 
 ### branching
@@ -170,16 +174,36 @@ to copy changes from a branch to the main branch you do the following:
 1. go to the branch you want changes to e.g main
 2. run `git merge branch_name` to merge changes from the given branch name to the currently connected branch
 
+
 #### merge conflics
 these conflicts arise when 2 files having the same content are merged
 
 They can also occur when merging branches or when merging forked histories
 
+you can either use the inbuilt merge confict resolver in VS code or manually edit the files by removing unwanted lines
+
 
 
 ## rebasing
- redo this section later
 
+
+## stashing
+
+this is a way to create a snapshot of non-staged changes. It saves all changes in a temp location so that the user can perform other tasks e.g switching to other branchesm reverting etc.
+
+The changes can be reapplied later
+
+`git stash` to stash uncommited changes
+
+`git stash apply` to reapply the latest stash
+
+`git stash list` to see list of all stashes
+
+`git stash clear` to clear the stash
+
+`git stash drop stash@{1}` to delete a desired stash
+
+`git stash drop` deletes the most recent stash
 
 ## bonus commands
 
@@ -360,8 +384,3 @@ this testing phase is done before deploying to production so that changes can be
 6. **merge new code**
 merge code from the current branch to the main branch
 
-#### stashing and branching
-
-HEAD is a pointer that will always point to the last commit of the branch
-
-when the branch is switched, the HEAD pointer will move to the last commit of the current branch
