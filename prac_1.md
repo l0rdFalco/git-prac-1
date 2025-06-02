@@ -116,6 +116,10 @@ to get greater info about a given commit, use `git show commid_id`
 
 use `git ls-files` to see which files are being tracked in the local repo
 
+## bonus commands
+
+`git archive branch_name --format=zip -o ./archive_name.zip` is used to archive create a zip of the given name from the given branch
+
 ## Parallel development
 
 ### branching
@@ -181,7 +185,6 @@ you can either use the inbuilt merge confict resolver in VS code or manually edi
 
 
 ## rebasing
- redo this section later
 
 
 ## stashing
@@ -381,12 +384,3 @@ this testing phase is done before deploying to production so that changes can be
 6. **merge new code**
 merge code from the current branch to the main branch
 
-#### stashing and branching
-
-HEAD is a pointer that will always point to the last commit of the branch
-
-when the branch is switched, the HEAD pointer will move to the last commit of the current branch
-
-## bonus commands
-
-`git archive branch_name --format=zip -o ./archive_name.zip` is used to archive create a zip of the given name from the given branch
