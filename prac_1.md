@@ -171,6 +171,13 @@ to copy changes from a branch to the main branch you do the following:
 1. go to the branch you want changes to e.g main
 2. run `git merge branch_name` to merge changes from the given branch name to the currently connected branch
 
+#### merge conflics
+these conflicts arise when 2 files having the same content are merged
+
+They can aldo occur when merging branches or when merging forked histories
+
+
+
 ## rebasing
  redo this section later
 
