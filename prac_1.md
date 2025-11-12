@@ -1,3 +1,4 @@
+/home/lordf/VSMain/SaaS_Template_V1/controllers/blogController.js
 ## introduction to git
 
 version control is a system that records changes to a file(s) over time so that you can recall specific versions later.
@@ -30,7 +31,7 @@ changes made in the remote repo is made instantly available to other devs connec
 ### how does git work?
 there are three different local areas within git:
 1. working copy/directory
-2. staging area
+2. staging area/index
 3. local repository
 
 when a file is changed in any way, those changes reside in the working copy
@@ -47,7 +48,7 @@ actions git uses with the remote repo include fetch, merge clone push, fetch
 ### workflow
 1. **git add** moves changes from the working directory to the staging area. This staging area is an intermediate/temporary location
 
-2. **git commit** moces changes from the staging area to the local repo
+2. **git commit** moves changes from the staging area to the local repo. `git commit --amend` is used to fix a broken commit
 
 3. **git push** moves the changes from the local repo to the remote repo
 
@@ -154,7 +155,7 @@ when one creates a new branch, the new branch will have a copy of all the commit
 
 `git log branch_name` lists out all the commits in the mentioned branch
 
-`git rev-list branch_name` shows the number of commits in a given branch
+`git rev-list branch_name` shows the list of all commit ids in a given branch
 
 `git push --set-upstream origin branch_name` when run from a local branch is used to create a corresponding branch of the given alias in the remote repo if said remote branch doesnt exist
 
@@ -201,6 +202,8 @@ It solves the same problem as git merge in that both integrate changes from one 
 ## stashing
 
 this is a way to create a snapshot of non-staged changes. It saves all changes in a temp location so that the user can perform other tasks e.g switching to other branchesm reverting etc.
+
+By default it only works on _modified tracked files_. It will not stash changes in files that have never been added to the staging area
 
 The changes can be reapplied later
 
@@ -396,5 +399,16 @@ this testing phase is done before deploying to production so that changes can be
 merge code from the current branch to the main branch
 
 
-GitLap CI/CD pipeline
-start from 4:00:00
+### CI/CD
+This is the process of continously building testing and deploying code changes at every small iteration in a bid to reduce bugs.
+
+**Pipelines:** these make CI/CD possible. Helps to aumate a step or series of steps in the software development processs like initiating code builds, running tests, staging production environments etc. It therefore provides a more standardized approach to feedback loops, reduces errors and increase development pace.
+
+Jenkins and gitlab CI/CD are 2 major tools used in this procedure
+
+### GITOPS
+
+
+
+
+
